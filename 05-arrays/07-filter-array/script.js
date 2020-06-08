@@ -89,6 +89,10 @@
         },
     ];
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click", function() {
+        let major = people.filter(function (e) {
+            return e.age > 18;
+        });
+        console.log(major);
+    });
 })();

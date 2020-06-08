@@ -22,5 +22,10 @@
         "Lucas",
     ]);
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        let nbP = people.size;
+        console.log(nbP);
+        console.log(people.has('Alexandre'));
+        
+    });
 })();

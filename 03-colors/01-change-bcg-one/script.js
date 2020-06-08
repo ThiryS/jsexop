@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    const performColor = color => {
+        document.body.style.background = color;
+    }
+    
+
+
+    Array.from(document.querySelectorAll("button")).forEach($btn =>
+        $btn.addEventListener(
+            "click",
+            () => (performColor($btn.id), false),
+        ),
+    );
 
 })();

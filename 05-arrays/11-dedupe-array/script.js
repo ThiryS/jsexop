@@ -28,6 +28,15 @@
         "cerise",
     ];
 
-    // your code here
+    function remove_duplicates(arr) {
+        let s = new Set(arr);
+        let it = s.values();
+        return Array.from(it);
+    }
+    document.getElementById("run").addEventListener("click", function() {
+        let b = remove_duplicates(fruits);
+        console.log(b);
+        
+    });
 
 })();

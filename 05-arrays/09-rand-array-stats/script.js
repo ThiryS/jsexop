@@ -11,6 +11,27 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        let average = (array) => array.reduce((a, b) => a + b) / array.length;
+        var arr = [];
+        var i = 1;
+        while(arr.length < 10){
+            var r = Math.floor(Math.random() * 100) + 1;
+            var str = 'n-';
+            str += i;
+            if(arr.indexOf(r) === -1) {
+                arr.push(r)
+                document.getElementById(str).innerHTML = arr[i-1];
+                i++;
+            }
+        }
+        document.getElementById('max').innerHTML = Math.max(...arr);
+        document.getElementById('min').innerHTML = Math.min(...arr);
+        document.getElementById('average').innerHTML = average(arr);
+        document.getElementById('sum').innerHTML = arr.reduce(reducer);
+        
+    });
+
 
 })();

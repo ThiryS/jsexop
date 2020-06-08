@@ -89,6 +89,8 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        console.log(people.find(element => element.firstname == 'Jean' && element.lastname == 'Dupont'));
+    });
 
 })();

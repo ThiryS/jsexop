@@ -11,6 +11,26 @@
 
 (function() {
 
-    // your code here
-
+    
+    document.getElementById("run").addEventListener("click", function() {
+        
+        let yess = numberOfFridaythe13thsIn(Number(document.getElementById("year").value));
+        alert(yess);
+        function numberOfFridaythe13thsIn(jahr){
+            var d = new Date();
+            var counter = 0;
+            var month;
+        
+            for(month=0;month<12;month++)
+            {
+             d.setFullYear(jahr, month,13);
+                if (d.getDay() == 5)
+                {
+                  counter++;
+                }
+            }
+        
+            return counter;                            
+        }
+    });
 })();

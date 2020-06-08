@@ -10,9 +10,14 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-
-    // your code here
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours();
+    var dateTime = date+' '+time;
+    if (time >= 18) {
+        document.getElementById("target").innerHTML = "Good evening";
+    } else {
+        document.getElementById("target").innerHTML = "Hello ";
+    }
 
 })();

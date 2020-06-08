@@ -10,7 +10,20 @@
 // You will have time to focus on it later.
 
 (function() {
+    document.getElementById("run").addEventListener("click", function() {
+        var str = document.getElementById("color").value;
+        if (isColor(str)) {
+            document.body.style.background = str;
+        } else {
+            alert('pas une couleur');
+        }
+        
+    });
 
-    // your code here
-
+    function isColor(strColor){
+        var s = new Option().style;
+        s.color = strColor;
+        return s.color == strColor;
+      }
+    
 })();

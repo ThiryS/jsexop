@@ -24,6 +24,19 @@
         "cerise",
     ];
 
-    // your code here
+    alert(fruits);
+
+    document.getElementById("run").addEventListener("click", function() {
+        
+        var newLength;
+        var fruit;
+        fruit = fruits.shift ( );
+        newLength = fruits.unshift ( "banana" );
+        newLength = fruits.push ( "kiwi" );
+
+        alert(fruits);
+    });
+
+    
 
 })();
