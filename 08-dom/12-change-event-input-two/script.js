@@ -9,24 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  var patt = new RegExp(/^(?=(.*\d){2}).{8,}$/);
 
-    var patt = new RegExp(/^(?=(.*\d){2}).{8,}$/);
+  document.getElementById("pass-one").addEventListener("input", doThing);
 
-    
-    document.getElementById("pass-one").addEventListener('input', doThing);
-
-    function doThing(e){
-        if ( !patt.test(e.target.value) ) {
-            document.getElementById("validity").innerHTML = ('Not ok');
-                  
-        } 
-        else {
-            document.getElementById("validity").innerHTML = ('Ok');
-        }
-        
-        
-     }
-
-
+  function doThing(e) {
+    if (!patt.test(e.target.value)) {
+      document.getElementById("validity").innerHTML = "Not ok";
+    } else {
+      document.getElementById("validity").innerHTML = "Ok";
+    }
+  }
 })();

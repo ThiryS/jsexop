@@ -9,15 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    document.getElementById("pass-one").addEventListener('input', doThing);
-    document.getElementById("pass-one").setAttribute('maxlength', 10);
-    function doThing(e){
-        let str = document.getElementById("pass-one").value;
-        document.getElementById("counter").innerHTML = (str.length +'/10');
-        
-        
-     }
-
+(function () {
+  document.getElementById("pass-one").addEventListener("input", doThing);
+  document.getElementById("pass-one").setAttribute("maxlength", 10);
+  function doThing(e) {
+    let str = document.getElementById("pass-one").value;
+    document.getElementById("counter").innerHTML = str.length + "/10";
+  }
 })();

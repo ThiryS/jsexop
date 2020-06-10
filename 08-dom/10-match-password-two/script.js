@@ -9,22 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  document.getElementById("run").addEventListener("click", function () {
+    let pass1 = document.getElementById("pass-one").value;
+    let pass2 = document.getElementById("pass-two").value;
 
-    document.getElementById("run").addEventListener("click", function() {
-
-        let pass1 = document.getElementById("pass-one").value;
-        let pass2 = document.getElementById("pass-two").value;
-
-        if (pass1 === pass2) {
-            document.getElementById("pass-one").style.borderColor = "green";
-            document.getElementById("pass-two").style.borderColor = "green";
-        } else {
-            document.getElementById("pass-one").className = "error";
-            document.getElementById("pass-two").className = "error";
-        }
-        
-
-    });
-
+    if (pass1 === pass2) {
+      document.getElementById("pass-one").style.borderColor = "green";
+      document.getElementById("pass-two").style.borderColor = "green";
+    } else {
+      document.getElementById("pass-one").className = "error";
+      document.getElementById("pass-two").className = "error";
+    }
+  });
 })();
