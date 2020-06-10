@@ -11,6 +11,12 @@
 
 (function() {
 
-    // your code here
-
+    var e = document.getElementsByClassName("target");
+    let elength = e.length
+    console.log(e); 
+    for (let i = 0; i < elength; i++) {
+        e[0].className = "owned";
+        
+    }
+    console.log(e); 
 })();

@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
+    var e = document.querySelector('#target');
+    e.id = "owned";
 
 })();

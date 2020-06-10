@@ -11,9 +11,23 @@
 
 (() => {
     class Animal {
+        static greeting = 'hi';
+        constructor(name){
+            this.name = name;
+            
+        }
         sayHello() {
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
-    // your code here
+    class Cat extends Animal{
+    }
+    class Dog extends Animal  {   
+    }
+    document.getElementById("run").addEventListener("click", function() {
+        dog1 = new Dog('sim');
+        cat1 = new Cat('jerem');
+        console.log(dog1.sayHello());
+        console.log(cat1.sayHello());
+    });
 })();

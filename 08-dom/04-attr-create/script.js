@@ -11,6 +11,15 @@
 
 (function() {
 
-    // your code here
+    var e = document.getElementById("source");
+    console.log(e);
+    let str = e.dataset;
+    str = str.image;
+    console.log(str);
+    var img = document.createElement("img"); 
+    img.src = str;
+    document.getElementById('target').appendChild(img); 
+    
+    console.log(img);
 
 })();

@@ -11,6 +11,22 @@
 
 (function() {
 
-    // your code here
+    var patt = new RegExp(/^(?=(.*\d){2}).{8,}$/);
+
+    
+    document.getElementById("pass-one").addEventListener('input', doThing);
+
+    function doThing(e){
+        if ( !patt.test(e.target.value) ) {
+            document.getElementById("validity").innerHTML = ('Not ok');
+                  
+        } 
+        else {
+            document.getElementById("validity").innerHTML = ('Ok');
+        }
+        
+        
+     }
+
 
 })();
