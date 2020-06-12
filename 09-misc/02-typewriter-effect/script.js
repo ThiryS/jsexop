@@ -9,8 +9,18 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  var i = 0;
+  let txt = document.getElementById("target").innerHTML;
+  document.getElementById("target").innerHTML = '';
+  typeWriter();
 
-    // your code here
-
+  function typeWriter() {
+    if (i < txt.length) {
+      var speed = Math.floor(Math.random() * 100) + 1;
+      document.getElementById("target").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
 })();

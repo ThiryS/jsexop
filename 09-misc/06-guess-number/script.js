@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+    let target = Math.floor(Math.random() * 100) + 1;
+    let find = false;
+    for (var i = 0; find === false; i++) {
+        const aNumber = Number(window.prompt("Guess the number (between 1 and 100): ", ""));
+        if(aNumber === target){
+            find = true;
+        }else if (target > aNumber) {
+                alert('Higher');
+        } else if (target < aNumber){
+            alert('Lower');
+        }
+    }
+
+    alert(`That s it! The number was ${target}, you needed ${i} guesses`);
 
 })();
