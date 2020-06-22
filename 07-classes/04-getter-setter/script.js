@@ -15,6 +15,7 @@
             this.firstname = firstname;
             this.lastname = lastname;
         }
+        
         getterName(){
             let str = this.firstname + ' ' + this.lastname;
             return str;
@@ -29,8 +30,7 @@
     document.getElementById("run").addEventListener("click", function() {
         person1 = new Person('Simon', 'Thiry');
         console.log(person1.getterName());
-        let str = 'Jeremy Thiry';
-        person1.setterName(str);
+        person1.setterName('Jeremy Thiry');
         console.log(person1.getterName());
     });
 })();
