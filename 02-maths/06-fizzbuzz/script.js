@@ -15,13 +15,13 @@
     for (let i = 1; i <101; i++) {
         if (i%3 == 0) {
             if (i%5 == 0) {
-                str = str + 'fizzBizz ';
+                str = str + 'fizzBuzz ';
             } else {
                 str = str + 'fizz ';
             }
         } else {
             if (i%5 == 0) {
-                str = str + 'bizz ';
+                str = str + 'buzz ';
             } else {
                 str = str + i + ' ';
             }

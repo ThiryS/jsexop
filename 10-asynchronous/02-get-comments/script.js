@@ -10,24 +10,34 @@
 // You will have time to focus on it later.
 
 (() => {
-     function callbackTest(error, articlesArr) {
-         if (error != null) {
-             console.log("impossible de créer le tableau");
-         } else {
-             articlesArr.forEach(article => {
-                 window.lib.getComments(article.id, (error,commentsArr) => {
-                    if (error =! null) {
-                        console.log("impossible d'exporter les comm")
+    function callbackTest (error, articlesArr) {
+        
+        if (error != null){
+            console.log("Impossible de créer le tableau d'articles")
+
+
+        } else {
+            articlesArr.forEach(article => {
+
+                window.lib.getComments(article.id, (error,commentsArr) => {
+
+                    if (error != null){
+                        console.log("Impossible d'exporter les commentaires")
                     } else {
                         article.comments = commentsArr;
                     }
-                 });
-             });
-         };
-         console.table(articlesArr);
-     };
 
-     document.getElementById('run').addEventListener("click",() => {
+                });
+            });
+        };
+        
+        console.table(articlesArr);
+
+    };
+
+    document.getElementById("run").addEventListener("click",() => {
+    
         window.lib.getPosts(callbackTest);
-     });
+    
+    });
 })();
